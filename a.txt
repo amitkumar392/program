@@ -1,0 +1,80 @@
+11.	Hybrid Inheritance
+ 
+Create Interface Vehicle
+Property:
+float taxPercentage=10%;
+Method
+           getregistrationNumber
+           getownerName;
+ 
+            interface Engine extends Vehicle
+ 
+           Method
+                                    getChasisNumber
+                                    getEngineFuelType ? enum DIESEL, PETROL, GAS, ELECTRIC
+ 
+interface Features extends Vehicle
+ 
+            Method:
+                        isAutoStart;
+                        isdigitalSpeedOMeter
+class TwoWheeler implements Engine, Features
+{
+            //do not allow GAS enum for getEngineFuelType
+            //derived method should appropriate member variables..
+            Constructors to fill all the members variable…. Using appropriate methods
+ 
+            //additional property
+            salePrice;
+            yearOfManufacturing;
+            taxPrice; //apply the taxPercentage
+            totalPrice; //salePrice + taxPrice
+ 
+            printDetails()
+{
+            Sysout (carOwner, FuleType, isAutoStart, YearOfManufacturing, totalPrice, taxPercentage);
+}
+ 
+}
+ 
+ 
+class Car implements Engine, Features
+{
+            //do not allow Electric enum for getEngineFuelType
+            //derived method should appropriate member variables..
+            Constructors to fill all the members variable…. Using appropriate methods
+ 
+            //additional property
+            salePrice;
+            yearOfManufacturing;
+            taxPrice; //apply the taxPercentage
+            totalPrice; //salePrice + taxPrice
+ 
+printDetails()
+{
+            Sysout (carOwner, FuleType, isAutoStart, YearOfManufacturing, totalPrice, taxPercentage);
+}
+ 
+}
+ 
+Main Class
+{
+//get the inputs required for creation of twowheeler, car
+TwoWheeler twoWheeler = new TwoWheeler(………..);
+twoWheeler. printDetails();
+Car car = new Car (………..);
+car. printDetails();
+ 
+//Output 1: give the owner name as same for twowheeler and car and total is once printed
+// Output 2: different owner: owner1 bought twowheeler , owner2 bought car.. change the taxPercentage and run for this output
+ 
+sysout(“ownername bought 1 twowheeler and 1 car for the total price of ” + totalPrice (twowheeler.saleprice+car.salesprice) ); //refer the sample output
+}
+ 
+Excepted Output 1:
+Anbu bought 1 twowheeler and 1 car for the total price of $  1,500,000.99
+ 
+Excepted Output 2:
+Anbu bought 1 twowheeler for the total price of $  500,000.99 including tax 10%
+Anbu bought 1 car for the total price of $  1,000,000.00 including tax 10%
+ 
