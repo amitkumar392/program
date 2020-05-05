@@ -1,80 +1,170 @@
-11.	Hybrid Inheritance
+11. Create an class named Employee with the following private attributes / member variables.
+
+String name
+
+Address address
+
+Department dept
+
+Include a 2-argument constructor.
+
+Include getters and setters.
+
+Include an method named printEmployeeDetails() .
+
+ Create a class named Address . Include the   following private attributes / member variables.
+
+String city
+
+String country
+
+Include a 2-argument constructor.
+
+ Include getters and setters.
+
+
+Create a class named Department . Include the following private attributes / member variables.
+
+Technology tech;
+
+Include a 1-argument constructor.
+
+ Include getters and setters
+
+
+Create a class named Technology . Include the following private attributes / member variables.
+
+String skillName;
+
+Include a 1-argument constructor.
+
+ Include getters and setters.
+
  
-Create Interface Vehicle
-Property:
-float taxPercentage=10%;
-Method
-           getregistrationNumber
-           getownerName;
+
+Create another class called Example11Main. In the method, create instances of the above classes and test the above classes.
+
+All text in bold corresponds to input and the rest corresponds to output.
+
+Sample Input and Output:
+
+Enter the Employee name
+
+Anbu
+
+Enter the city
+
+Chennai
+
+Enter the country
+
+India
+
+Enter the skill
+
+Java
+
+Get the above inputs for 5 employees (different city, country, skill)
+
  
-            interface Engine extends Vehicle
+
+Print the each employee details in below format
+
+Anbu | Chennai | India | Java
+
+…..
+
+Print the # of employees with Skill
+
+# of employee with Java : 3
+
+# of employee with .NET : 2
+
+Print the # of employees with Country
+
+# of employee with India : 4
+
+# of employee with US : 1
+
  
-           Method
-                                    getChasisNumber
-                                    getEngineFuelType ? enum DIESEL, PETROL, GAS, ELECTRIC
+
+12 Create an class named Student with the following private attributes / member variables.
+
+String name
+
+Exam[5] exam
+
+Include a 2-argument constructor.
+
+Include getters and setters.
+
+Include an method named printStudentDetails() .
+
+ Create a class named Exam . Include the   following private attributes / member variables.
+
+String exam
+
+float score
+
+Include a 2-argument constructor.
+
+ Include getters and setters.
+
+
  
-interface Features extends Vehicle
- 
-            Method:
-                        isAutoStart;
-                        isdigitalSpeedOMeter
-class TwoWheeler implements Engine, Features
-{
-            //do not allow GAS enum for getEngineFuelType
-            //derived method should appropriate member variables..
-            Constructors to fill all the members variable…. Using appropriate methods
- 
-            //additional property
-            salePrice;
-            yearOfManufacturing;
-            taxPrice; //apply the taxPercentage
-            totalPrice; //salePrice + taxPrice
- 
-            printDetails()
-{
-            Sysout (carOwner, FuleType, isAutoStart, YearOfManufacturing, totalPrice, taxPercentage);
-}
- 
-}
- 
- 
-class Car implements Engine, Features
-{
-            //do not allow Electric enum for getEngineFuelType
-            //derived method should appropriate member variables..
-            Constructors to fill all the members variable…. Using appropriate methods
- 
-            //additional property
-            salePrice;
-            yearOfManufacturing;
-            taxPrice; //apply the taxPercentage
-            totalPrice; //salePrice + taxPrice
- 
-printDetails()
-{
-            Sysout (carOwner, FuleType, isAutoStart, YearOfManufacturing, totalPrice, taxPercentage);
-}
- 
-}
- 
-Main Class
-{
-//get the inputs required for creation of twowheeler, car
-TwoWheeler twoWheeler = new TwoWheeler(………..);
-twoWheeler. printDetails();
-Car car = new Car (………..);
-car. printDetails();
- 
-//Output 1: give the owner name as same for twowheeler and car and total is once printed
-// Output 2: different owner: owner1 bought twowheeler , owner2 bought car.. change the taxPercentage and run for this output
- 
-sysout(“ownername bought 1 twowheeler and 1 car for the total price of ” + totalPrice (twowheeler.saleprice+car.salesprice) ); //refer the sample output
-}
- 
-Excepted Output 1:
-Anbu bought 1 twowheeler and 1 car for the total price of $  1,500,000.99
- 
-Excepted Output 2:
-Anbu bought 1 twowheeler for the total price of $  500,000.99 including tax 10%
-Anbu bought 1 car for the total price of $  1,000,000.00 including tax 10%
- 
+
+Create another class called Example12Main. In the method, create instances of the above classes and test the above classes.
+
+All text in bold corresponds to input and the rest corresponds to output.
+
+Sample Input and Output:
+
+Enter the Student name
+
+Anbu
+
+Enter the exam name
+
+Java
+
+Enter the score
+
+90
+
+Enter the exam name
+
+SQL
+
+Enter the score
+
+45
+
+Enter the exam name
+
+Angular
+
+Enter the score
+
+25
+
+Enter the exam name
+
+SpringBoot
+
+Enter the score
+
+90
+
+Enter the exam name
+
+Micro Services
+
+Enter the score
+
+60
+
+Anbu exam result
+
+# of subject passed : 4
+
+# of subject fail : 1 (pass  percentage is 50%)
