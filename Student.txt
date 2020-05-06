@@ -1,0 +1,82 @@
+public class Student {  
+	private String name;  
+	private Exam exam;  
+private String exam1;
+pivate int score1;
+private String exam2;
+pivate int score2;
+private String exam3;
+pivate int score3;
+	  
+public Student(String name, Exam exam) {  
+    this.name = name;  
+    this.exam = exam;      
+}  
+  void getStudentDetails() throws IOException
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println ("Enter Name of Student:");
+		name = br.readLine();		
+		System.out.println ("Enter the exam1 name:");
+		exam1 = br.readLine();
+		System.out.println ("Enter marks of exam1:");
+		score1 = Integer.parseInt(br.readLine());
+System.out.println ("Enter the exam2 name:");
+		exam2 = br.readLine();
+		System.out.println ("Enter marks of exam2:");
+		score2 = Integer.parseInt(br.readLine());
+System.out.println ("Enter the exam3 name:");
+		exam3 = br.readLine();
+		System.out.println ("Enter marks of exam3:");
+		score3 = Integer.parseInt(br.readLine());
+	}
+	void printStudentDetails()
+	{
+int totalPass=0, totalFail=0;
+if(score1>50){
+ totalPass++;
+} else {
+  totalFail++;
+}
+
+if(score2>50){
+ totalPass++;
+} else {
+  totalFail++;
+}
+
+if(score3>50){
+ totalPass++;
+} else {
+  totalFail++;
+}				
+		System.out.println (name+"exam result");
+		System.out.println ("# of subject passed : "+totalPass);
+		System.out.println ("# of subject fail : "+totalFail+""+"pass percentage is 50%");
+		
+	}	
+
+// getters and setters
+}
+============================================================================================
+public class Exam {  
+private String examName; 
+private float score; 
+  
+public Exam(String examName, float score) {  
+    this.examName = examName;     
+    this.score = score;  
+}  
+
+//getters and setters
+  
+}  
+================================================================================
+public class ExampleMain {  
+public static void main(String[] args) {  
+student s=new student();
+		s.getStudentDetails();
+		s.printStudentDetails();  
+      
+}  
+}  
